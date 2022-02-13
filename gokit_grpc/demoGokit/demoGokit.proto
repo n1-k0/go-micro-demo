@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package="./;demoGokit";
+package demoGokit;
+
+message InParams {
+    int32 A=1;
+    int32 B=2;
+}
+
+message Res {
+    int32 C=3;
+}
+
+service DemoService {
+    rpc Add (InParams) returns (Res) {}
+}
